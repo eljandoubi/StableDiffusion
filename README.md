@@ -6,8 +6,10 @@
 
 <p align="center">
     <a href="License"><img src="https://img.shields.io/github/license/eljandoubi/StableDiffusion"></a>
-    <a href="Linux"><img src="https://img.shields.io/github/actions/workflow/status/eljandoubi/StableDiffusion/python-package-conda.yml?label=Linux"></a>
-    <a href="Conda"><img src="https://img.shields.io/github/actions/workflow/status/eljandoubi/StableDiffusion/python-package-conda.yml?label=Conda"></a>
+    <a href="Linux"><img src="https://img.shields.io/github/actions/workflow/status/eljandoubi/StableDiffusion/linux-conda.yml?label=Linux"></a>
+    <a href="Conda"><img src="https://img.shields.io/github/actions/workflow/status/eljandoubi/StableDiffusion/linux-conda.yml?label=Conda"></a>
+    <a href="Pylint"><img src="https://img.shields.io/github/actions/workflow/status/eljandoubi/StableDiffusion/pylint-test.yml?label=Pylint"></a>
+    <a href="Pytest"><img src="https://img.shields.io/github/actions/workflow/status/eljandoubi/StableDiffusion/pytest-ci.yml?label=Pytest"></a>
 </p>
 
 Coding StableDiffusion from scratch using pytorch.
