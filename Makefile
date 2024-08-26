@@ -24,10 +24,8 @@ pylint:
 	pylint **/*.py
 
 check:
-	. $(CONDA_BASE)/etc/profile.d/conda.sh && \
-	conda activate $(ENV_NAME) && \
-	pylint **/*.py && \
-	pytest test_code.py
+	make pylint
+	make pytest
 
 run:
 	echo "The code is not completed yet."

@@ -10,8 +10,8 @@ class VAEDecoder(nn.Module):
 
     def __init__(self):
         super().__init__()
-        self.layers = nn.ModuleList(
-            [
+        self.layers = nn.Sequential(
+
             # (Batch_Size, 4, Height / 8, Width / 8) -> (Batch_Size, 4, Height / 8, Width / 8)
             nn.Conv2d(4, 4, kernel_size=1, padding=0),
 
@@ -90,18 +90,12 @@ class VAEDecoder(nn.Module):
 
             # (Batch_Size, 128, Height, Width) -> (Batch_Size, 3, Height, Width)
             nn.Conv2d(128, 3, kernel_size=3, padding=1),
-            ]
+
         )
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """Forward method"""
         # x: (Batch_Size, 4, Height / 8, Width / 8)
         # Remove the scaling added by the Encoder.
-        x = x / 0.18215
-
-        for layer in self.layers:
-
-            x = layer(x)
-
         # (Batch_Size, 3, Height, Width)
-        return x
+        return self.layers(x / 0.18215)
