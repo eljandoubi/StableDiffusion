@@ -12,7 +12,7 @@
     <a href="Pytest"><img src="https://img.shields.io/github/actions/workflow/status/eljandoubi/StableDiffusion/pytest-ci.yml?label=Pytest"></a>
 </p>
 
-Coding StableDiffusion from scratch using pytorch.
+Coding Stable Diffusion from scratch using pytorch.
 
 ## Setup environment
 * Clone the repository and Go to StableDiffusion directory.
@@ -24,8 +24,15 @@ git clone https://github.com/eljandoubi/StableDiffusion.git && cd StableDiffusio
 ```bash
 make build
 ```
-
-## Clean environment.
+## Check the code sanity
+```bash
+make check
+```
+## Run the pipeline
+```bash
+make run
+```
+## Clean environment
 ```bash
 make clean
 ```

@@ -16,12 +16,21 @@ build:
 pytest:
 	. $(CONDA_BASE)/etc/profile.d/conda.sh && \
 	conda activate $(ENV_NAME) && \
-	pytest test_models.py
+	pytest test_code.py
 
 pylint:
 	. $(CONDA_BASE)/etc/profile.d/conda.sh && \
 	conda activate $(ENV_NAME) && \
 	pylint **/*.py
+
+check:
+	. $(CONDA_BASE)/etc/profile.d/conda.sh && \
+	conda activate $(ENV_NAME) && \
+	pylint **/*.py && \
+	pytest test_code.py
+
+run:
+	echo "The code is not completed yet."
 
 clean:
 	conda remove --name $(ENV_NAME) --all -y
