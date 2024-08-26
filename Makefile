@@ -24,8 +24,8 @@ pylint:
 	pylint **/*.py
 
 check:
-	make pylint
 	make pytest
+	make pylint
 
 run:
 	echo "The code is not completed yet."
